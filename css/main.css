@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* --------------------- UTILITIES ------------------------- */ 
+.title {
+    font-family: 'Merriweather', serif;
+}
+
+.body-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.half-width {
+    background: lightseagreen;
+    width: 50%;
+}
+
+.content-wrapper {
+    background: yellow;
+}
+
+/* --------------------- HEADER + FOOTER LAYOUT  ------------------------- */ 
+header, 
+footer {
+    width: 100vw;
+    background: #c8b9ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-wrap;
+}
+
+header {
+    padding: 15px 0px;
+}
+
+header .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-flow: row wrap;
+}
+  
+header nav ul {
+    display: flex;
+    justify-content:last baseline;
+    width: 100%;
+}
+
+/* --------------------- HEADER CUSTOM STYLES ------------------------- */ 
+.header-logo{
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-li {
+    color: #000;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link:visited {
+    color: #000;
+}
+
+
+/* --------------------- HERO SECTION LAYOUT  ------------------------- */ 
