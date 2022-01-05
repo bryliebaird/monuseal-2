@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
 /* --------------------- UTILITIES ------------------------- */ 
+.hidden {
+    display:none;
+}
+
 .title {
     font-family: 'Merriweather', serif;
 }
@@ -77,3 +85,24 @@ header nav ul {
 
 
 /* --------------------- HERO SECTION LAYOUT  ------------------------- */ 
+#hero {
+    height: 100vh;
+    background: #c8b9ab;
+}
+
+.hero-text {
+    margin: 0;
+}
+
+
+/* ------------- TABLETS ---------------- */
+
+
+/* ------------- DESKTOPS ---------------- */
+@media(min-width: 1200px){
+    #hero {
+        background: url("../img/bg-img.JPG") no-repeat #c8b9ab;
+        background-size: cover;
+        background-position: center;
+    }
+}
