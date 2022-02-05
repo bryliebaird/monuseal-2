@@ -2,6 +2,7 @@
 
 body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    background: #c8b9ab;
 }
 
 /* --------------------- UTILITIES ------------------------- */ 
@@ -17,10 +18,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.half-width {
-    background: lightseagreen;
-    width: 50%;
-}
+
 
 .content-wrapper {
     background: yellow;
@@ -38,7 +36,7 @@ footer {
 }
 
 header {
-    padding: 15px 0px;
+    margin-top: 15px;
 }
 
 header .content-wrapper {
@@ -51,13 +49,10 @@ header .content-wrapper {
 header nav {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
-    flex-flow: row wrap;
 }
   
 header nav ul {
     display: flex;
-    justify-content:last baseline;
     width: 100%;
 }
 
@@ -88,12 +83,14 @@ header nav ul {
 #hero {
     height: 100vh;
     background: #c8b9ab;
+
+    display: flex;
+    justify-content: center;
 }
 
 .hero-text {
-    margin: 0;
+    color: #fff;
 }
-
 
 /* ------------- TABLETS ---------------- */
 
