@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    background: #c8b9ab;
+}
+
+/* --------------------- UTILITIES ------------------------- */ 
+.hidden {
+    display:none;
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+}
+
+.body-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content-wrapper {
+    background: yellow;
+}
+
+/* --------------------- HEADER + FOOTER LAYOUT  ------------------------- */ 
+header, 
+footer {
+    width: 100vw;
+    background: #c8b9ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-wrap;
+}
+
+header {
+    margin-top: 15px;
+}
+
+header .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
+  
+header nav ul {
+    display: flex;
+    width: 100%;
+}
+
+/* --------------------- HEADER CUSTOM STYLES ------------------------- */ 
+.header-logo{
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-li {
+    color: #000;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link:visited {
+    color: #000;
+}
+
+
+/* --------------------- HERO SECTION LAYOUT  ------------------------- */ 
+#hero {
+    height: 100vh;
+    background: #c8b9ab;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text {
+    color: #fff;
+}
+
+/* ------------- TABLETS ---------------- */
+
+
+/* ------------- DESKTOPS ---------------- */

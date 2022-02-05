@@ -1,105 +1,516 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles
+  ==========================================================================
+  */
+
+/* ----------- IMPORT GOOGLE FONTS ----------- */ 
+
+
+/*  Open Sans
+    font-family: 'Open Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/*  Merriweather
+    font-family: 'Merriweather', serif; */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
+  
+
+/* ----- GLOBAL STYLES ------ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+  
+html {
+  font-size: 16px;
+} 
+  
 body {
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    background: #c8b9ab;
+  /* the one simple thing that took you 30 minutes to figure out... prevent overflow on page when mobile/tablet using max-width and overflow-x... must use both PLEASE DONT FORGET */ 
+/* 
+  max-width: 100%;
+  overflow-x: hidden; 
+*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: left;
 }
 
-/* --------------------- UTILITIES ------------------------- */ 
-.hidden {
-    display:none;
+img {
+  width: 100%; /* images will take 100% of parent container */
 }
-
-.title {
-    font-family: 'Merriweather', serif;
+  
+figure {
+  margin: 0; /* images will take 100% of parent container */
 }
-
-.body-text {
-    font-family: 'Open Sans', sans-serif;
+  
+ul,
+ol {
+  list-style-type: none;
 }
-
-
+  
+/* ------- CSS LAYOUT STYLES ------ */ 
 
 .content-wrapper {
-    background: yellow;
+  width: 90%;
+  margin: 30px 0;
 }
 
-/* --------------------- HEADER + FOOTER LAYOUT  ------------------------- */ 
-header, 
+/* !!!
+  .CONTENT-WRAPPER 
+    the first section after the header (#hero) and the section before the footer (#contact) have margin: 0px; to prevent space between header/hero as well as footer/contact
+  !!!
+*/ 
+
+.hidden {
+  display:none;
+}
+
+/* ------- BASE STYLES -------- */ 
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.875em;
+}
+  
+h3, 
+h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #000;
+}
+  
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05em;
+  line-height: 1.5;
+  color: #000;
+}
+  
+a {
+  color: #e2e3ed;
+  text-decoration: none;
+}
+  
+address {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
+
+button {
+  background:#FFCF42;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ------- HEADER + FOOTER LAYOUT -------- */ 
+header,
 footer {
-    width: 100vw;
-    background: #c8b9ab;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row-wrap;
-}
-
-header {
-    margin-top: 15px;
+  background: #c8b9ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 header .content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin-bottom: 0px;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-around;
+footer .content-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+/* ------- HEADER ---------- */ 
+
+header .header-divider {
+  background: #000;
+  width: 100%;
+  height: 1px;
+  /* margin: 10px 0 20px 0; */
+}
+
+/* ------- NAVBAR --------- */
+nav {
+  width: 60%;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap; /* nav-items float on one line */ 
+  margin: 0;
+}
+
+nav .nav-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  /* text-transform: uppercase; */
+  color: #000;
+}
+
+/* ------- FOOTER -------- */
+
+
+/* ------- HERO SECTION --------- */ 
+#hero {
+  height: 80vh;
+  background: url("../img/bg-img.JPG") center no-repeat #c8b9ab;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero .content-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px; /* creates 0px of space between header and hero, overrides .content-wrapper 30px margin top, only*/
+}
+
+#hero .hero-text {
+  color: #fff;
+}
+
+.hero-overlay {
+  width: inherit;
+  height: 80vh;
+  background-color: rgba(0,0,0, 0.3);
+}
+
+/* ------- ABOUT SECTION --------- */ 
+
+#about {
+  background: #c8b9ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+#about .content-wrapper {
+  /* background: pink; */
+}
+
+.about-text-container {
+  margin: 25px 0px;
+}
+
+/* ------- VIDEO SECTION --------- */ 
+
+#video {
+  background: #2F2F2F;
+  display: flex;
+  justify-content: center;
+}
+
+#video .content-wrapper {
+  /* background: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 50px 0px;
+}
+
+#video h2, p {
+  color: #f3f3f3;
+  text-align: center;
+}
+
+/* ------- FEATURES SECTION --------- */ 
+
+#features article p {
+  color: #000;
+}
+
+
+/* ------- CONTACT SECTION --------- */ 
+#contact {
+  background: olive;
+}
+
+#contact .content-wrapper {
+  margin-bottom: 0px; /*creates 0px of space btwn footer and contact, overrides .content-wrapper 30px margin top, only*/
 }
   
-header nav ul {
-    display: flex;
-    width: 100%;
-}
+/* ==========================================================================
+    Helper classes
+========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+  .hidden,
+  [hidden] {
+    display: none !important;
+  }
+  
+  /*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+  
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+   * Extends the .sr-only class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+  
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+   * Hide visually and from screen readers, but maintain layout
+   */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+   * Clearfix: contain floats
+   *
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    `contenteditable` attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that receive the `clearfix` class.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
+  
+  .clearfix::before,
+  .clearfix::after {
+    content: " ";
+    display: table;
+  }
+  
+  .clearfix::after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  
+/* Tablet Styles ==> 768px */
 
-/* --------------------- HEADER CUSTOM STYLES ------------------------- */ 
-.header-logo{
-    text-decoration: none;
-    color: #000;
-}
-
-.nav-list {
-    list-style-type: none;
-}
-
-.nav-li {
-    color: #000;
-}
-
-.nav-link {
-    text-decoration: none;
-}
-
-.nav-link:visited {
-    color: #000;
-}
+  /* @media (min-width: 768px) { } */ 
 
 
-/* --------------------- HERO SECTION LAYOUT  ------------------------- */ 
-#hero {
-    height: 100vh;
-    background: #c8b9ab;
+/* Desktop Styles ==> 1200px */ 
 
-    display: flex;
-    justify-content: center;
-}
-
-.hero-text {
-    color: #fff;
-}
-
-/* ------------- TABLETS ---------------- */
-
-
-/* ------------- DESKTOPS ---------------- */
-@media(min-width: 1200px){
-    #hero {
-        background: url("../img/bg-img.JPG") no-repeat #c8b9ab;
-        background-size: cover;
-        background-position: center;
+    /* @media (min-width: 1200px) { } */ 
+  
+  
+  
+  
+  
+  
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
     }
-}
+  
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+  
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+  
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+  
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+  
+    pre {
+      white-space: pre-wrap !important;
+    }
+  
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+  
+    /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+      display: table-header-group;
+    }
+  
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+  
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
