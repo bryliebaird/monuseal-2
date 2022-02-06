@@ -101,6 +101,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
   
+/* 
+    Colors 
+    1. dark-yellow: #E4C061;
+    2. dark gray: #444;
+    3. taupe brown: #c8b9ab;
+*/
 
 /* ----- GLOBAL STYLES ------ */
 
@@ -136,7 +142,7 @@ ul,
 ol {
   list-style-type: none;
 }
-  
+
 /* ------- CSS LAYOUT STYLES ------ */ 
 
 .content-wrapper {
@@ -187,7 +193,8 @@ address {
 }
 
 button {
-  background:#FFCF42;
+  /* background:#FFCF42; */
+  background: #E4C061;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -206,7 +213,6 @@ footer {
 
 header .content-wrapper {
   padding: 20px 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,33 +262,64 @@ nav .nav-text {
 
 /* ------- HERO SECTION --------- */ 
 #hero {
-  height: 60vh;
+  /* height: 60vh; --> instead of fixed height using vh, use padding to create height */
   background: url("../img/bg-img.JPG") center no-repeat #c8b9ab;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  /* overflow-x: hidden; */
+}
+
+#hero-overlay {
+  background-color: rgba(0,0,0, 0.3);
+  height: 100%;
+  width: 100%;
 
   display: flex;
   justify-content: center;
-  align-items:flex-start;
+  align-items: center;
+  flex-flow: column;
 }
 
 #hero .content-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 0px; /* creates 0px of space between header and hero, overrides .content-wrapper 30px margin top, only*/
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center;
+  padding: 100px 0px;
 }
 
-#hero .hero-text-container {
-  padding-top: 50px;
+#hero-title {
+  font-family: 'Merriweather', serif;
+  font-size:2.5em;
+  color: #f3f3f3;
+  word-wrap: break-word;
 }
 
-#hero .hero-text {
-  color: #fff;
+#hero-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  /* letter-spacing: 1.6; */
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f3f3f3;
+  /* word-wrap: break-word; */
 }
 
-.hero-overlay {
-  width: inherit;
-  height: 80vh;
-  background-color: rgba(0,0,0, 0.3);
+#hero-text {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.6;
+  font-size: 1em;
+  font-weight: 400;
+  color: #f3f3f3;
+  /* word-wrap: break-word; */
+}
+
+#hero-btn {
+  margin: 20px 0 0 0;
 }
 
 /* ------- ABOUT SECTION --------- */ 
@@ -347,6 +384,7 @@ nav .nav-text {
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  text-align: center;
 }
 
 .features-items > article:nth-child(2){
@@ -358,7 +396,8 @@ nav .nav-text {
 }
 
 #features .features-icon{
-  color: #FFCF42;
+  /* color: #FFCF42; */
+  color: #E4C061;
   margin: 0 0 12px 0;
 }
 
@@ -373,7 +412,7 @@ nav .nav-text {
 
 /* ------- CONTACT SECTION --------- */ 
 #contact {
-  background: olive;
+  background: #444;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,6 +425,7 @@ nav .nav-text {
 }
 
 #contact h2 {
+  color: #fff;
   margin: 0 0 12px 0;
 }
 
@@ -394,7 +434,8 @@ nav .nav-text {
 }
 
 #contact .address-container {
-  background: #FFCF42;
+  /* background: #FFCF42; */
+  background: #E4C061;
   border-radius: 8px;
 
   display: flex;
@@ -403,11 +444,11 @@ nav .nav-text {
   flex-flow: column;
   
   margin: 35px 0px;
-  /* padding: 25px 0px; */
+  padding: 15px 0px;
 }
 
-address {
-  margin: 25px 0px;
+#email-container {
+  margin: 20px 0px;
 }
 
 address > p {
