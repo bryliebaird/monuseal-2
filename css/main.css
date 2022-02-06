@@ -295,17 +295,15 @@ nav .nav-text {
   flex-flow: column;
 }
 
-#about .content-wrapper {
-  /* background: pink; */
-}
-
-.about-text-container {
-  margin: 25px 0px;
-}
-
 #about h2 {
   text-align: center;
+  margin: 0 0 12px 0;
 }
+
+#about-one {
+  margin: 0 0 20px 0;
+}
+
 
 /* ------- VIDEO SECTION --------- */ 
 
@@ -320,12 +318,19 @@ nav .nav-text {
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  padding: 50px 0px;
 }
 
 #video h2, p {
   color: #f3f3f3;
   text-align: center;
+}
+
+#video h2 {
+  margin: 0 0 12px 0;
+}
+
+#video-btn {
+  margin: 22px 0 0 0;
 }
 
 /* ------- FEATURES SECTION --------- */ 
@@ -354,10 +359,12 @@ nav .nav-text {
 
 #features .features-icon{
   color: #FFCF42;
+  margin: 0 0 12px 0;
 }
 
 #features article h3 {
   color: #fff;
+  margin: 0 0 6px 0;
 }
 
 #features article p {
@@ -378,6 +385,14 @@ nav .nav-text {
   margin-bottom: 0px; /*creates 0px of space btwn footer and contact, overrides .content-wrapper 30px margin top, only*/
 }
 
+#contact h2 {
+  margin: 0 0 12px 0;
+}
+
+#contact-btn {
+  margin: 22px 0 0 0;
+}
+
 #contact .address-container {
   background: #FFCF42;
   border-radius: 8px;
@@ -390,7 +405,6 @@ nav .nav-text {
   margin: 35px 0px;
   /* padding: 25px 0px; */
 }
-
 
 address {
   margin: 25px 0px;
