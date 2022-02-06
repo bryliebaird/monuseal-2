@@ -256,19 +256,23 @@ nav .nav-text {
 
 /* ------- HERO SECTION --------- */ 
 #hero {
-  height: 80vh;
+  height: 60vh;
   background: url("../img/bg-img.JPG") center no-repeat #c8b9ab;
   background-size: cover;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
 }
 
 #hero .content-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 0px; /* creates 0px of space between header and hero, overrides .content-wrapper 30px margin top, only*/
+}
+
+#hero .hero-text-container {
+  padding-top: 50px;
 }
 
 #hero .hero-text {
@@ -299,16 +303,19 @@ nav .nav-text {
   margin: 25px 0px;
 }
 
+#about h2 {
+  text-align: center;
+}
+
 /* ------- VIDEO SECTION --------- */ 
 
 #video {
-  background: #2F2F2F;
+  background: #444;
   display: flex;
   justify-content: center;
 }
 
 #video .content-wrapper {
-  /* background: pink; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,11 +329,41 @@ nav .nav-text {
 }
 
 /* ------- FEATURES SECTION --------- */ 
+#features {
+  background: #444;
 
-#features article p {
-  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
+#features article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.features-items > article:nth-child(2){
+  margin: 50px 0px;
+}
+
+.features-items > article:nth-child(3){
+  margin: 0px 0px 50px 0px;
+}
+
+#features .features-icon{
+  color: #FFCF42;
+}
+
+#features article h3 {
+  color: #fff;
+}
+
+#features article p {
+  color: #fff;
+}
 
 /* ------- CONTACT SECTION --------- */ 
 #contact {
