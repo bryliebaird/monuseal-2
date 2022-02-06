@@ -331,7 +331,6 @@ nav .nav-text {
 /* ------- FEATURES SECTION --------- */ 
 #features {
   background: #444;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -368,10 +367,37 @@ nav .nav-text {
 /* ------- CONTACT SECTION --------- */ 
 #contact {
   background: olive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
 }
 
 #contact .content-wrapper {
   margin-bottom: 0px; /*creates 0px of space btwn footer and contact, overrides .content-wrapper 30px margin top, only*/
+}
+
+#contact .address-container {
+  background: #FFCF42;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  
+  margin: 35px 0px;
+  /* padding: 25px 0px; */
+}
+
+
+address {
+  margin: 25px 0px;
+}
+
+address > p {
+  color: #000;
 }
   
 /* ==========================================================================
