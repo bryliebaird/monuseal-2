@@ -11,11 +11,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-   html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-  }
+  
   
   /*
    * Remove text-shadow in selection highlight:
@@ -86,49 +82,34 @@
   /* ==========================================================================
      Author's custom styles
   ==========================================================================
-  */
+  */ 
 
-/* ----------- IMPORT GOOGLE FONTS ----------- */ 
+/*  
+  --- FONTS ---
+    Open Sans
+    font-family: 'Open Sans', sans-serif; 
 
+    Merriweather
+    font-family: 'Merriweather', serif; 
 
-/*  Open Sans
-    font-family: 'Open Sans', sans-serif; */
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-
-/*  Merriweather
-    font-family: 'Merriweather', serif; */ 
-
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
-  
-/* 
-    Colors 
+    --- COLORS ---
     1. dark-yellow: #E4C061;
+
     2. dark gray: #444;
+
     3. taupe brown: #c8b9ab;
+
 */
 
 /* ----- GLOBAL STYLES ------ */
-
 * {
   margin: 0;
   padding: 0;
 }
-  
-html {
+
+body {
   font-size: 16px;
 } 
-  
-body {
-  /* the one simple thing that took you 30 minutes to figure out... prevent overflow on page when mobile/tablet using max-width and overflow-x... must use both PLEASE DONT FORGET */ 
-/* 
-  max-width: 100%;
-  overflow-x: hidden; 
-*/
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-  text-align: left;
-}
 
 img {
   width: 100%; /* images will take 100% of parent container */
@@ -147,7 +128,8 @@ ol {
 
 .content-wrapper {
   width: 90%;
-  margin: 30px 0;
+  margin: 55px 0;
+  /* background: pink; */
 }
 
 /* !!!
@@ -160,40 +142,61 @@ ol {
   display:none;
 }
 
-/* ------- BASE STYLES -------- */ 
-
+/* ------- FONT STYLES -------- */ 
 h2 {
   font-family: 'Merriweather', serif;
-  font-size: 1.875em;
+  font-size: 2.2em;
+  font-weight: 400;
+  color: #f3f3f3;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
 }
-  
-h3, 
+
+h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.4em;
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+  color: #f3f3f3;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
 h4 {
   font-family: 'Merriweather', serif;
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 0.8px;
+  margin-bottom: 5px;
 }
-  
+
 p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.05em;
-  line-height: 1.5;
-  color: #000;
+  font-size: 1.1em;
+  line-height: 2;
+  letter-spacing: 0.5px;
+  font-weight: 400;
 }
-  
+
+.dark-text {
+  color: #444;
+}
+
+.light-text {
+  color: #f3f3f3;
+}
+
 a {
-  color: #e2e3ed;
+  color: #444;
   text-decoration: none;
 }
   
 address {
-  font-family: 'Open Sans', sans-serif;
   font-style: normal;
 }
 
 button {
-  /* background:#FFCF42; */
   background: #E4C061;
   border: none;
   border-radius: 5px;
@@ -292,6 +295,10 @@ nav .nav-text {
   padding: 100px 0px;
 }
 
+#hero-btn {
+  margin: 20px 0 0 0;
+}
+
 #hero-title {
   font-family: 'Merriweather', serif;
   font-size:2.5em;
@@ -318,12 +325,7 @@ nav .nav-text {
   /* word-wrap: break-word; */
 }
 
-#hero-btn {
-  margin: 20px 0 0 0;
-}
-
 /* ------- ABOUT SECTION --------- */ 
-
 #about {
   background: #c8b9ab;
   display: flex;
@@ -332,18 +334,27 @@ nav .nav-text {
   flex-flow: column;
 }
 
-#about h2 {
-  text-align: center;
-  margin: 0 0 12px 0;
+#about .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
 #about-one {
   margin: 0 0 20px 0;
 }
 
+#about h2 {
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+#about p {
+  text-align: center;
+}
 
 /* ------- VIDEO SECTION --------- */ 
-
 #video {
   background: #444;
   display: flex;
@@ -357,17 +368,16 @@ nav .nav-text {
   flex-flow: column;
 }
 
-#video h2, p {
-  color: #f3f3f3;
-  text-align: center;
+#video-btn {
+  margin: 22px 0 0 0;
 }
 
 #video h2 {
   margin: 0 0 12px 0;
 }
 
-#video-btn {
-  margin: 22px 0 0 0;
+#video p {
+  text-align: center;
 }
 
 /* ------- FEATURES SECTION --------- */ 
@@ -396,18 +406,12 @@ nav .nav-text {
 }
 
 #features .features-icon{
-  /* color: #FFCF42; */
   color: #E4C061;
   margin: 0 0 12px 0;
 }
 
-#features article h3 {
-  color: #fff;
-  margin: 0 0 6px 0;
-}
-
-#features article p {
-  color: #fff;
+#features p {
+  line-height: 1.4;
 }
 
 /* ------- CONTACT SECTION --------- */ 
@@ -424,17 +428,7 @@ nav .nav-text {
   margin-bottom: 0px; /*creates 0px of space btwn footer and contact, overrides .content-wrapper 30px margin top, only*/
 }
 
-#contact h2 {
-  color: #fff;
-  margin: 0 0 12px 0;
-}
-
-#contact-btn {
-  margin: 22px 0 0 0;
-}
-
 #contact .address-container {
-  /* background: #FFCF42; */
   background: #E4C061;
   border-radius: 8px;
 
@@ -451,8 +445,16 @@ nav .nav-text {
   margin: 20px 0px;
 }
 
-address > p {
-  color: #000;
+#contact-btn {
+  margin: 22px 0 0 0;
+}
+
+#contact h2 {
+  margin: 0 0 12px 0;
+}
+
+#contact address p {
+  line-height: 1.2;
 }
   
 /* ==========================================================================
