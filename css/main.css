@@ -143,7 +143,15 @@ ol {
 }
 
 /* ------- FONT STYLES -------- */ 
-h2 {
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 3.75em;
+  color: #f3f3f3;
+  line-height: 0;
+}
+
+h2 /* section titles */ {
   font-family: 'Merriweather', serif;
   font-size: 2.2em;
   font-weight: 400;
@@ -152,7 +160,7 @@ h2 {
   letter-spacing: 0.8px;
 }
 
-h3 {
+h3 /* features */ {
   font-family: 'Merriweather', serif;
   font-size: 1.4em;
   letter-spacing: 0.8px;
@@ -162,13 +170,19 @@ h3 {
   font-weight: 500;
 }
 
-h4 {
+
+h4 /* contact */ {
   font-family: 'Merriweather', serif;
-  font-size: 20px;
+  font-size: 1.125em;
   font-weight: 600;
-  color: #444;
   letter-spacing: 0.8px;
   margin-bottom: 5px;
+}
+
+h5 /* footer */ {
+  font-family: 'Merriweather', serif;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 p {
@@ -201,12 +215,15 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125em;
   text-align: center;
+  letter-spacing: 0.2px;
 }
 
-/* ------- HEADER + FOOTER LAYOUT -------- */ 
-header,
-footer {
+/* ------- HEADER  -------- */ 
+header {
   background: #c8b9ab;
   display: flex;
   justify-content: center;
@@ -221,13 +238,6 @@ header .content-wrapper {
   align-items: center;
   flex-flow: column;
   margin-bottom: 0px;
-}
-
-footer .content-wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
 }
 
 /* ------- HEADER ---------- */ 
@@ -262,6 +272,27 @@ nav .nav-text {
 
 /* ------- FOOTER -------- */
 
+footer {
+  background: #c8b9ab;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  padding-bottom: 12px;
+}
+
+footer .content-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: column;
+  margin-bottom: 0;
+}
+
+footer p {
+  font-size: 0.875em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
 /* ------- HERO SECTION --------- */ 
 #hero {
@@ -275,17 +306,6 @@ nav .nav-text {
   /* overflow-x: hidden; */
 }
 
-#hero-overlay {
-  background-color: rgba(0,0,0, 0.3);
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-}
-
 #hero .content-wrapper {
   display: flex;
   justify-content: center;
@@ -295,34 +315,25 @@ nav .nav-text {
   padding: 100px 0px;
 }
 
+#hero-overlay {
+  background-color: rgba(0,0,0, 0.3);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
 #hero-btn {
   margin: 20px 0 0 0;
 }
 
-#hero-title {
-  font-family: 'Merriweather', serif;
-  font-size:2.5em;
-  color: #f3f3f3;
-  word-wrap: break-word;
-}
-
-#hero-subtitle {
+.hero-text {
   font-family: 'Open Sans', sans-serif;
   /* letter-spacing: 1.6; */
   font-size: 1em;
   font-weight: 400;
-  text-transform: uppercase;
-  color: #f3f3f3;
-  /* word-wrap: break-word; */
-}
-
-#hero-text {
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 1.6;
-  font-size: 1em;
-  font-weight: 400;
-  color: #f3f3f3;
-  /* word-wrap: break-word; */
 }
 
 /* ------- ABOUT SECTION --------- */ 
@@ -368,8 +379,12 @@ nav .nav-text {
   flex-flow: column;
 }
 
-#video-btn {
+#videoBtn {
   margin: 22px 0 0 0;
+}
+
+#video-btn-icon {
+  color: #444;
 }
 
 #video h2 {
@@ -378,6 +393,51 @@ nav .nav-text {
 
 #video p {
   text-align: center;
+}
+
+/* ------ VIDEO MODAL ------- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /* background:rgba(0,0,0, 0.3); */
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column wrap;
+  background-color: #303030;
+  
+  margin: 5% auto; /* 15% from the top and centered */
+  padding-bottom: 40px;
+  width: 95%; /* Could be more or less, depending on screen size */
+}
+
+iframe {
+  width: 95%;
+}
+
+/* The Close Button */
+#closeBtn {
+  display: flex;
+  justify-content: flex-end;
+  color: #aaa;
+  float: right;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* ------- FEATURES SECTION --------- */ 

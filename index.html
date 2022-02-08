@@ -49,10 +49,10 @@
             <div id="hero-overlay">
                 <div class="content-wrapper">
                     <div class="hero-text-container">
-                        <p id="hero-subtitle">Introducing</p>
-                        <p id="hero-title">Monuseal</p>
-                        <p id="hero-text">The world's first professional grade stone sealer</p>
-                        <button id="hero-btn">Order Today</button>
+                        <!-- <p id="hero-subtitle" class="light-text">Introducing</p> -->
+                        <h1 class="light-text">Monuseal</h1>
+                        <p class="hero-text light-text">The world's first professional grade stone sealer</p>
+                        <button id="hero-btn" class="dark-text">Order Today</button>
                     </div>
                 </div>
             </div>  
@@ -78,9 +78,20 @@
                 <h2>Discover</h2>
                 <div class="section-divider"></div>
                 <p class="light-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore neque delectus id dolorum itaque blanditiis ut! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <!-- VIDEO LINK -->
-                <iframe class="hidden" width="560" height="315" src="https://www.youtube.com/embed/dzPq-Z9f7H4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <button id="video-btn" type="button">Play Video</button>
+
+
+                <!-- TRIGGER MODAL BTN -->
+                <button id="videoBtn" class="dark-text" type="button">
+                    <i id="video-btn-icon" class="fas fa-play-circle fa-lg">&nbsp;</i>Play&nbsp;Video
+                </button>
+                <!-- MODAL -->
+                <div id="videoModal" class="modal">
+                    <!--MODAL CONTENT (VIDEO) -->
+                    <div class="modal-content">
+                        <span id="closeBtn">&times;</span>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dzPq-Z9f7H4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -131,23 +142,23 @@
                 <div class="contact-input-container">
                     <h2>Connect Today</h2>
                     <p class="light-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequatur, tempora delectus nisi, id quo doloribus sed molestias, rerum quas culpa iusto repellat quibusdam distinctio cum?</p>
-                    <button id="contact-btn">Conntect Today</button>
+                    <button id="contact-btn" class="dark-text">Conntect Today</button>
                 </div>
             <!-- CONTACT INFORMATION BOX -->
                 <div class="address-container">
                     <address id="address-container">
-                        <h4>Address</h4>
+                        <h4 class="dark-text">Address</h4>
                         <p class="dark-text">3425 West Main</p>
                         <p class="dark-text">Riverton, Wyoming</p>
                     </address>
 
                     <address id="email-container">
-                        <h4>Email</h4>
+                        <h4 class="dark-text">Email</h4>
                         <p class="dark-text">drew@bottmonument.com</p>
                     </address>
 
                     <address id="number-container">
-                        <h4>Phone Number</h4>
+                        <h4 class="dark-text">Phone Number</h4>
                         <p class="dark-text">(307)-856-3719</p>
                     </address>
                 </div>
@@ -158,8 +169,8 @@
 <!-- FOOTER SECTION -->
     <footer>
         <div class="content-wrapper">
-            <h5>Monuseal</h5>
-            <p>Copyright @ <span>####</span></p>
+            <h5 class="dark-text">Monuseal</h5>
+            <p class="dark-text">Copyright <span>####</span></p>
         </div>
     </footer>
 
