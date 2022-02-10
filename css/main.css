@@ -624,7 +624,6 @@ iframe {
 
 
     /* ------- HEADER --------- */
-  
     header .content-wrapper {
       display: flex;
       justify-content: center;
@@ -663,23 +662,6 @@ iframe {
       margin: 0 0 0 35px;
     }
 
-    /* ------- ABOUT --------- */ 
-
-    #about .content-wrapper {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-flow: row wrap;
-    }
-
-    #about #about-one {
-      margin: 0px 0px 20px 0px;
-    }
-
-    #about p {
-      text-align: left;
-    }
-  
     /* ------- FEATURES --------- */ 
     #features .features-items {
       display: flex;
@@ -699,6 +681,43 @@ iframe {
 
     .features-items > article:nth-child(2){
       margin: 0px;
+    }
+
+
+    /* ------- CONTACT --------- */ 
+
+    #contact .contact-wrapper {
+      padding: 0 0 50px 0;
+    }
+
+    #contact .contact-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: row-reverse;
+    }
+
+    #contact .input-container {
+      display: flex;
+      flex-flow: column;
+      width: 45%;
+    }
+
+    #contact .address-container {
+      min-width: 30%;
+      margin: 0;
+      padding: 25px;
+    }
+
+    #contact .input-container p {
+      /* display: none; */
+      text-align: left;
+    }
+
+    #contact h2 {
+      display: flex;
+      justify-content: 
+      
     }
 
   }
