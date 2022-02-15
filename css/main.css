@@ -156,8 +156,9 @@ h2 /* section titles */ {
   font-size: 2.2em;
   font-weight: 400;
   color: #f3f3f3;
-  line-height: 1.4;
   letter-spacing: 0.8px;
+  margin: 0;
+  line-height: 1;
 }
 
 h3 /* features */ {
@@ -220,6 +221,15 @@ button {
   font-size: 1.125em;
   text-align: center;
   letter-spacing: 0.2px;
+}
+
+hr {
+  width: 35%;
+  margin: 0px 0px 10px 0px;
+}
+
+.dark-hr {
+  border-top: 1px solid  #444;
 }
 
 /* ------- HEADER  -------- */ 
@@ -493,28 +503,52 @@ iframe {
 }
 
 #contact .content-wrapper {
-  margin-bottom: 0px; /*creates 0px of space btwn footer and contact, overrides .content-wrapper 30px margin top, only*/
-}
-
-#contact .address-container {
-  background: #E4C061;
-  border-radius: 8px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column;
-  
-  margin: 35px 0px;
-  padding: 15px 0px;
+  flex-flow: column wrap;
+  margin-bottom: 0px; /*creates 0px of space btwn footer and contact, overrides .content-wrapper 30px margin top, only*/
 }
 
-#email-container {
-  margin: 20px 0px;
+#contact .contact-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+#contact .address-card {
+  background: #E4C061;
+  border-radius: 8px;
+  margin: 25px;
+}
+
+#contact .address-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 30px;
+}
+
+#email {
+  margin: 30px 0px;
+}
+
+#contact hr {
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 #contact-btn {
-  margin: 22px 0 0 0;
+  background: transparent;
+  border: 1px solid #E4C061;
+  color: #E4C061;
+  margin: 20px 0 0 0;
+}
+
+#contact-btn:hover {
+  background: #E4C061;
+  color: #444;
 }
 
 #contact h2 {
@@ -613,17 +647,16 @@ iframe {
      Modify as content requires.
      ========================================================================== */
   
-/* Tablet Styles ==> 768px */
 
+/* ######################## Tablet Styles ########################*/
   @media (min-width: 768px) { 
 
-    /* ------ UTILITIES ------- */ 
+  /* ------ UTILITIES ------- */ 
     .content-wrapper {
       width: 85%;
     }
 
-
-    /* ------- HEADER --------- */
+  /* ------- HEADER --------- */
     header .content-wrapper {
       display: flex;
       justify-content: center;
@@ -642,7 +675,7 @@ iframe {
       display: none;
     }
 
-    /* ----------- NAVBAR ------------ */
+  /* ----------- NAVBAR ------------ */
     nav {
       width: 50%;
     
@@ -662,7 +695,7 @@ iframe {
       margin: 0 0 0 35px;
     }
 
-    /* ------- FEATURES --------- */ 
+  /* ------- FEATURES --------- */ 
     #features .features-items {
       display: flex;
       justify-content: space-around;
@@ -684,40 +717,31 @@ iframe {
     }
 
 
-    /* ------- CONTACT --------- */ 
+  /* ------- CONTACT --------- */ 
+   #contact .contact-wrapper {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-flow: row;
+     flex-direction: row-reverse;
+   }
 
-    #contact .contact-wrapper {
-      padding: 0 0 50px 0;
-    }
-
-    #contact .contact-wrapper {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      flex-direction: row-reverse;
+    #contact .address-container {
+      margin: 0;
+      padding: 25px; 
     }
 
     #contact .input-container {
-      display: flex;
-      flex-flow: column;
-      width: 45%;
-    }
-
-    #contact .address-container {
-      min-width: 30%;
-      margin: 0;
-      padding: 25px;
-    }
-
-    #contact .input-container p {
-      /* display: none; */
       text-align: left;
     }
 
-    #contact h2 {
-      display: flex;
-      justify-content: 
-      
+    #contact-btn {
+      width: 100%;
+    }
+
+    #contact hr {
+      margin: 0;
     }
 
   }
