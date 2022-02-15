@@ -558,6 +558,27 @@ iframe {
 #contact address p {
   line-height: 1.2;
 }
+
+
+/* FAQ CSS */ 
+#faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#faq .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#faq article {
+  margin: 30px 0px;
+  width: 48%;
+  border: 1px solid #444;
+}
   
 /* ==========================================================================
     Helper classes
