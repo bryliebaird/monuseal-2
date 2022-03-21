@@ -232,6 +232,10 @@ hr {
   border-top: 1px solid  #444;
 }
 
+.light-hr {
+  border-top: 1px solid #f3f3f3;
+}
+
 /* ------- HEADER  -------- */ 
 header {
   background: #c8b9ab;
@@ -251,7 +255,6 @@ header .content-wrapper {
 }
 
 /* ------- HEADER ---------- */ 
-
 header .header-divider {
   background: #000;
   width: 100%;
@@ -508,6 +511,8 @@ iframe {
   align-items: center;
   flex-flow: column wrap;
   margin-bottom: 0px; /*creates 0px of space btwn footer and contact, overrides .content-wrapper 30px margin top, only*/
+  margin-top: 0px;
+  margin: 15px 0px;
 }
 
 #contact .contact-wrapper {
@@ -561,24 +566,49 @@ iframe {
 
 
 /* FAQ CSS */ 
+
 #faq {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #444;
 }
 
 #faq .content-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
+  flex-flow: column;
+  margin-top: 75px;
 }
 
 #faq article {
-  margin: 30px 0px;
-  width: 48%;
-  border: 1px solid #444;
+  margin: 22px 0px;
+  width: 80%;
+  text-align: center;
+  background: #c8b9ab;
+  padding: 10px;
+  border-radius: 8px;
 }
+
+#faq h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.5em;
+  letter-spacing: 0.8;
+}
+
+#faq h5 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#faq article p {
+  line-height: 1.75;
+}
+
   
 /* ==========================================================================
     Helper classes
